@@ -12,9 +12,9 @@ use BenSampo\Enum\Enum;
 final class CloudType extends Enum
 {
     const OD = 1;
-    const GD = 1;
-    const FTP = 2;
-    const AWSS3 = 3;
+    const GD = 2;
+    const FTP = 3;
+    const S3 = 4;
 
     public static function getDescription($value): string
     {
@@ -22,7 +22,7 @@ final class CloudType extends Enum
             self::OD => 'OneDrive',
             self::GD => 'Google Drive',
             self::FTP => 'FTP',
-            self::AWSS3 => 'Amazon S3',
+            self::S3 => 'Amazon S3',
             default => parent::getDescription($value),
         };
     }
@@ -33,7 +33,7 @@ final class CloudType extends Enum
             self::OD => asset('assets/icons/onedrive.svg'),
             self::GD => asset('assets/icons/googledrive.svg'),
             self::FTP => asset('assets/icons/ftp.svg'),
-            self::AWSS3 => asset('assets/icons/s3.svg'),
+            self::S3 => asset('assets/icons/s3.svg'),
             default => parent::getIcon($value),
         };
     }

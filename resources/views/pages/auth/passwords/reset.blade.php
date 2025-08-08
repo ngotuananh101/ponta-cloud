@@ -23,7 +23,7 @@
                 {{ __('New Password') }}
             </label>
             <label class="kt-input" data-kt-toggle-password="true">
-                <input name="password" placeholder="Enter a new password" type="password" value=""
+                <input name="password" placeholder="{{ __('Enter a new password') }}" type="password" value=""
                     @error('password') aria-invalid="true" @enderror />
                 <div class="kt-btn kt-btn-sm kt-btn-ghost kt-btn-icon bg-transparent! -me-1.5"
                     data-kt-toggle-password-trigger="true">
@@ -46,7 +46,7 @@
                 {{ __('Confirm Password') }}
             </label>
             <label class="kt-input" data-kt-toggle-password="true">
-                <input name="password_confirmation" placeholder="Re-enter a new Password" type="password" value=""
+                <input name="password_confirmation" placeholder="{{ __('Re-enter a new Password') }}" type="password" value=""
                     @error('password_confirmation') aria-invalid="true" @enderror />
                 <div class="kt-btn kt-btn-sm kt-btn-ghost kt-btn-icon bg-transparent! -me-1.5"
                     data-kt-toggle-password-trigger="true">

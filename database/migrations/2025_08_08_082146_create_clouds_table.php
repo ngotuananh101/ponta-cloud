@@ -9,8 +9,11 @@ return new class extends Migration {
     {
         Schema::create('clouds', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->tinyInteger('type');
             $table->string('display_name');
-            $table->longText('data');
+            $table->json('data');
+
             $table->timestamps();
         });
     }

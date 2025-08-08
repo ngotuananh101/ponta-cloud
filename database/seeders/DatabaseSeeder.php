@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\CloudType;
 use App\Models\Cloud;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,12 +17,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->unverified()->create([
+        User::factory()->create([
             'name' => 'Ngo Tuan Anh',
             'email' => 'ngotuananh2101@gmail.com',
         ]);
 
         Cloud::create([
+            'user_id' => 1,
+            'type' => CloudType::OD,
             'display_name' => 'OneDrive',
             'data' => json_encode([
                 'client_id' => env('ONEDRIVE_CLIENT_ID', 'your-client-id'),
