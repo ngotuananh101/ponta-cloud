@@ -37,4 +37,26 @@ final class CloudType extends Enum
             default => parent::getIcon($value),
         };
     }
+
+    public static function asArray(): array
+    {
+        return [
+            self::OD => [
+                'name' => self::getDescription(self::OD),
+                'icon' => self::getIcon(self::OD),
+            ],
+            self::GD => [
+                'name' => self::getDescription(self::GD),
+                'icon' => self::getIcon(self::GD),
+            ],
+            self::FTP => [
+                'name' => self::getDescription(self::FTP),
+                'icon' => self::getIcon(self::FTP),
+            ],
+            self::S3 => [
+                'name' => self::getDescription(self::S3),
+                'icon' => self::getIcon(self::S3),
+            ],
+        ];
+    }
 }

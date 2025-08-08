@@ -46,5 +46,8 @@
     "Enter Password": "Enter Password",
     "Re-enter Password": "Re-enter Password",
     "Enter a new password": "Enter a new password",
-    "Re-enter a new Password": "Re-enter a new Password"
+    "Re-enter a new Password": "Re-enter a new Password",
+    "Add Cloud": "Add Cloud",
+    "Select cloud provider you want to add": "Select cloud provider you want to add",
+    "Add New": "Add New"
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Enums\CloudType;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home.index');
+        $clouds = CloudType::asArray();
+        return view('pages.home.add', [
+            'clouds' => $clouds,
+        ]);
     }
 
     /**

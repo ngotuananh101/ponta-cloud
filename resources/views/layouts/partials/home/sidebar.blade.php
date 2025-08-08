@@ -15,9 +15,8 @@
             <!-- Input -->
             <a class="kt-btn kt-btn-secondary text-white [&_i]:text-white justify-center min-w-[198px]"
                 href="html/demo10/public-profile/projects/3-columns.html">
-                <i class="ki-filled ki-plus">
-                </i>
-                Add New
+                <i class="fa-solid fa-plus"></i>
+                {{ __('Add Cloud') }}
             </a>
             <!-- End of Input -->
             <button class="kt-btn kt-btn-icon kt-btn-secondary [&_i]:text-white" data-kt-modal-toggle="#search_modal">
